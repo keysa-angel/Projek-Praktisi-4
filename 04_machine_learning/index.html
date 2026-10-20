@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Demo klasifikasi risiko keterlambatan pengumpulan tugas menggunakan fitur jumlah tugas, waktu belajar, dan riwayat keterlambatan. Aturan skor dibuat transparan untuk edukasi, bukan model ML terlatih.">
+<title>LearnPredict — Machine Learning</title><link rel="stylesheet" href="style.css">
+</head><body>
+
+<header class="topbar"><a class="brand" href="#">✳ LearnPredict</a><span class="tag">STUDI KASUS 04</span></header><main class="container">
+<section class="hero"><div><p class="eyebrow">INTRODUCTION TO MACHINE LEARNING</p><h1>Belajar dari pola,<br><span>membuat prediksi.</span></h1><p class="muted">Masukkan beberapa fitur contoh untuk melihat hasil klasifikasi dan memahami proses evaluasi model.</p></div><div class="hero-mark">⌘</div></section>
+<section class="grid two"><article class="panel"><p class="eyebrow">INPUT FITUR</p><h2>Profil pengumpulan tugas</h2>
+<label>Jumlah tugas aktif <output id="taskOut">3 tugas</output><input id="tasks" type="range" min="0" max="10" value="3"></label>
+<label>Waktu belajar per hari <output id="studyOut">2 jam</output><input id="study" type="range" min="0" max="8" value="2"></label>
+<label>Riwayat terlambat <select id="late"><option value="0">Tidak pernah</option><option value="1">1–2 kali</option><option value="2">3 kali atau lebih</option></select></label>
+<button id="predict" class="btn">Jalankan prediksi →</button><p class="note">Demo ini memakai aturan skor sederhana agar alurnya mudah dipelajari, bukan model machine learning yang dilatih.</p></article>
+<article class="panel prediction"><p class="eyebrow">HASIL KLASIFIKASI</p><div id="predIcon" class="pred-icon">◎</div><h2 id="prediction">Risiko sedang</h2><p id="confidence" class="muted">Skor ilustratif: 40/100</p><div class="progress"><span id="predProgress"></span></div><p id="explain" class="insight">Hasil akan diperbarui berdasarkan fitur input.</p></article></section>
+<section class="panel"><p class="eyebrow">ALUR MACHINE LEARNING</p><h2>Dari data sampai evaluasi</h2><div class="steps"><div><i>01</i><b>Kumpulkan data</b><small>Fitur dan label contoh</small></div><div><i>02</i><b>Preprocessing</b><small>Periksa nilai dan format</small></div><div><i>03</i><b>Training</b><small>Pelajari pola dari data</small></div><div><i>04</i><b>Evaluasi</b><small>Uji pada data terpisah</small></div></div></section>
+</main><footer>LearnPredict · Demonstrasi konsep klasifikasi</footer>
+
+<script src="app.js"></script>
+</body></html>
